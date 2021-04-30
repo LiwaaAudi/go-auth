@@ -112,6 +112,7 @@ func User(c *fiber.Ctx) error {
 	return c.JSON(user)
 }
 
+// Create a new empty cookie and removing the old one
 func Logout(c *fiber.Ctx) error {
 	cookie := fiber.Cookie{
 		Name: "jwt",
